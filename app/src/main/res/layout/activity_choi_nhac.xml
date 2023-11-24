@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Choinhac">
+
+    <TextView
+        android:id="@+id/tv_tenNhac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Em oi Ha Noi pho"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_tenTacgia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Phu Quang"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/dia_nhac" />
+
+    <SeekBar
+        android:id="@+id/sb_time"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/black"
+        android:progressTint="@color/black"
+        android:thumbTint="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00:00"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center_horizontal"
+       >
+
+       <ImageButton
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_marginTop="40dp"
+           android:src="@drawable/baseline_fast_rewind_24"
+           android:background="@color/white"
+           android:layout_marginRight="30dp"
+           android:id="@+id/imgLui"
+           />
+
+       <ImageView
+           android:id="@+id/img_play"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_marginTop="40dp"
+           android:src="@drawable/baseline_play_circle_outline_24" />
+
+       <ImageButton
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_marginTop="40dp"
+           android:src="@drawable/baseline_fast_forward_24"
+           android:background="@color/white"
+           android:layout_marginLeft="30dp"
+           android:id="@+id/imgTien"
+           />
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_volume_off_24"/>
+
+        <SeekBar
+            android:id="@+id/sb_volume"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:progressTint="@color/black"
+            android:thumbTint="@color/black" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_volume_up01"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

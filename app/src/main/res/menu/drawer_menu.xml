@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+   <item android:id="@+id/qlHome"
+       android:title="HOME"
+       android:textColor="#FFFFFF"
+      />
+
+   <item android:id="@+id/qlAllSong"
+       android:title="ALL SONGS"
+       android:textColor="#FFFFFF"
+       />
+   <item android:id="@+id/qlFeaturedSong"
+       android:title="Featured Songs"
+       android:textColor="#FFFFFF"
+       />
+
+   <item android:id="@+id/qlPopularSong"
+       android:title="Popular Songs"
+       android:textColor="#FFFFFF"
+      />
+
+   <item
+       android:id="@+id/qlNewSong"
+       android:title="New Songs"
+       android:textColor="#FFFFFF"
+       />
+   <item
+       android:id="@+id/qlFeedback"
+       android:title="FeedBack"
+       android:textColor="#FFFFFF"
+       />
+   <item
+       android:id="@+id/qlContact"
+       android:title="Contact"
+       android:textColor="#FFFFFF"
+       />
+</menu>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment1"
+    tools:context="cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment$BlankFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Album"
+                android:textSize="19sp"
+                android:fontFamily="@font/robotocondensed_variablefont_wght"/>
+            <TextView
+                android:id="@+id/btnXemAlbum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xem tất cả"
+                android:textStyle="italic"
+                android:textSize="19sp"
+                android:fontFamily="@font/robotocondensed_variablefont_wght"/>        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle1"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Nghệ Sĩ"
+                android:textSize="19sp"
+                android:fontFamily="@font/robotocondensed_variablefont_wght"/>
+            <TextView
+                android:id="@+id/btnXemNgheSi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xem tất cả"
+                android:textStyle="italic"
+                android:textSize="19sp"
+                android:fontFamily="@font/robotocondensed_variablefont_wght"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle2"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listView"
+            />
+    </LinearLayout>
+</FrameLayout>
