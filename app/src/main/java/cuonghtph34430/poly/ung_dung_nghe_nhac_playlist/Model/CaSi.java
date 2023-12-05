@@ -1,9 +1,9 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model;
 
 public class CaSi {
-    private int IdCaSi;
-    private String TenCaSi;
-    private int AnhCaSi;
+    public int IdCaSi;
+    public String TenCaSi;
+    public int AnhCaSi;
     public CaSi() {
     }
     public CaSi(int idCaSi, String tenCaSi, int anhCaSi) {

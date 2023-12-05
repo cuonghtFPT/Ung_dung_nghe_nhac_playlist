@@ -11,20 +11,22 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.ListSong;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.CaSiDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.CaSi;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class ListSongAdapter extends BaseAdapter {
     Context context;
-    List<ListSong> arraySong;
-    private List<ListSong> originalList;
+    List<BaiHat> arraySong;
+    private final List<BaiHat> originalList;
 
-    public ListSongAdapter(Context context, List<ListSong> arraySong) {
+    public ListSongAdapter(Context context, List<BaiHat> arraySong) {
         this.context = context;
         this.arraySong = arraySong;
         this.originalList = new ArrayList<>(arraySong);
     }
-    public void updateList(List<ListSong> newList) {
+    public void updateList(List<BaiHat> newList) {
         arraySong.clear();
         arraySong.addAll(newList);
         notifyDataSetChanged();
@@ -50,14 +52,17 @@ public class ListSongAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.list_song, parent, false);
 
-        TextView tvSong = (TextView) view.findViewById(R.id.tvSong);
-        tvSong.setText(arraySong.get(position).getSong());
+        CaSiDAO caSiDAO = new CaSiDAO(context);
+        CaSi caSi = caSiDAO.getID(String.valueOf(arraySong.get(position).getIdCaSi()));
 
-        TextView tvSinger = (TextView) view.findViewById(R.id.tvSinger);
-        tvSinger.setText(arraySong.get(position).getSinger());
+        TextView tvSong = view.findViewById(R.id.tvSong);
+        tvSong.setText(arraySong.get(position).getTenBaiHat());
 
-        ImageView ivPicture = (ImageView) view.findViewById(R.id.ivpicture);
-        ivPicture.setImageResource(arraySong.get(position).getPicture());
+        TextView tvSinger = view.findViewById(R.id.tvSinger);
+        tvSinger.setText(caSi.getTenCaSi());
+
+        ImageView ivPicture = view.findViewById(R.id.ivpicture);
+        ivPicture.setImageResource(arraySong.get(position).getAnhBaiHat());
 
         return view;
     }

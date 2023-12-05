@@ -3,17 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/home"
         android:icon="@drawable/baseline_home_24"
-        android:title="Trang chủ"
+        android:title="@string/homepage"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/search"
         android:icon="@drawable/baseline_search_24"
-        android:title="Tìm kiếm"
+        android:title="@string/search"
         app:showAsAction="ifRoom"
         />
-    <item android:id="@+id/libary"
-        android:icon="@drawable/baseline_library_music_24"
-        android:title="Danh pách phát"
+    <item android:id="@+id/history"
+        android:icon="@drawable/baseline_history_24"
+        android:title="@string/history"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:icon="@drawable/baseline_person_24"
+        android:title="@string/personal"
         app:showAsAction="ifRoom"
         />
 </menu>

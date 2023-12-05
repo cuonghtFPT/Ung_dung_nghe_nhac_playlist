@@ -4,37 +4,46 @@
     >
 
    <item android:id="@+id/qlHome"
-       android:title="HOME"
+       android:title="@string/home"
        android:textColor="#FFFFFF"
-      />
+       />
 
    <item android:id="@+id/qlAllSong"
-       android:title="ALL SONGS"
+       android:title="@string/all_songs"
        android:textColor="#FFFFFF"
        />
    <item android:id="@+id/qlFeaturedSong"
-       android:title="Featured Songs"
+       android:title="@string/featured_songs"
        android:textColor="#FFFFFF"
        />
 
    <item android:id="@+id/qlPopularSong"
-       android:title="Popular Songs"
+       android:title="@string/popular_songs"
        android:textColor="#FFFFFF"
-      />
-
+       />
    <item
        android:id="@+id/qlNewSong"
-       android:title="New Songs"
+       android:title="@string/new_songs"
+       android:textColor="#FFFFFF"
+       />
+   <item
+       android:id="@+id/qlTheLoai"
+       android:title="@string/Genre"
+       android:textColor="#FFFFFF"
+       />
+   <item
+       android:id="@+id/qlBangXepHang"
+       android:title="@string/Chart"
        android:textColor="#FFFFFF"
        />
    <item
        android:id="@+id/qlFeedback"
-       android:title="FeedBack"
+       android:title="@string/feedbacks"
        android:textColor="#FFFFFF"
        />
    <item
        android:id="@+id/qlContact"
-       android:title="Contact"
+       android:title="@string/contact"
        android:textColor="#FFFFFF"
        />
 </menu>

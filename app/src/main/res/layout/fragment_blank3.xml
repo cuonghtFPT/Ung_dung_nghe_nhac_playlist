@@ -12,18 +12,18 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ImageView
                 android:id="@+id/albumCover"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="190dp"
                 android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
                 android:src="@drawable/anh_top" />
             <TextView
                 android:id="@+id/songTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Song Title"
+                android:text="Bảng xếp hạng"
                 android:textSize="30sp"
                 android:layout_below="@id/albumCover"
                 android:layout_centerHorizontal="true"/>
@@ -34,5 +34,4 @@
             android:id="@+id/lv_thongKe"
             />
     </LinearLayout>
-
 </FrameLayout>

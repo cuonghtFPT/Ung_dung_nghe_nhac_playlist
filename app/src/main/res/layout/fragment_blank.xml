@@ -27,14 +27,17 @@
                 android:layout_height="wrap_content"
                 android:text="Album"
                 android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="3dp"
                 android:fontFamily="@font/robotocondensed_variablefont_wght"/>
             <TextView
                 android:id="@+id/btnXemAlbum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xem tất cả"
-                android:textStyle="italic"
+                android:text="@string/see_all"
+                android:textStyle="bold"
                 android:textSize="19sp"
+                android:layout_marginLeft="35dp"
                 android:fontFamily="@font/robotocondensed_variablefont_wght"/>        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle1"
@@ -48,16 +51,19 @@
             <TextView
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:text="Nghệ Sĩ"
+                android:text="@string/artist"
                 android:textSize="19sp"
+                android:layout_marginLeft="3dp"
+                android:textStyle="bold"
                 android:fontFamily="@font/robotocondensed_variablefont_wght"/>
             <TextView
                 android:id="@+id/btnXemNgheSi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xem tất cả"
-                android:textStyle="italic"
+                android:text="@string/see_all"
                 android:textSize="19sp"
+                android:layout_marginLeft="35dp"
+                android:textStyle="bold"
                 android:fontFamily="@font/robotocondensed_variablefont_wght"/>
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView

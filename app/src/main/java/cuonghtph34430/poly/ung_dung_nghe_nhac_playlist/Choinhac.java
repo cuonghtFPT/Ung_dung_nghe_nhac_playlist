@@ -6,31 +6,43 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.ListSong;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.BaiHatDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.CaSiDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.LichSuDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.CaSi;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.LichSu;
 
 public class Choinhac extends AppCompatActivity {
-
+    BaiHatDAO baiHatDAO;
     TextView tvTime, tvDuration, tvTacgia, tvNhac;
     SeekBar sbTime, sbVolume;
     ImageView imgPlay;
     ImageButton imgLui,imgTien;
-
+    CaSiDAO caSiDAO;
     MediaPlayer musicPlayer;
+    ImageView anh_nhac;
+    BaiHat selectedSong;
     boolean isPlaying = false;
     Handler handler;
-
-    List<ListSong> songList; // Danh sách các bài hát
+    CaSi caSi;
+    List<BaiHat> songList; // Danh sách các bài hát
     int currentSongIndex = 0; // Vị trí hiện tại trong danh sách
-
+    LichSuDAO lichSuDAO;
+    LichSu lichSu;
+    Date currentTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,54 +51,43 @@ public class Choinhac extends AppCompatActivity {
         tvTacgia = findViewById(R.id.tv_tenTacgia);
         tvTime = findViewById(R.id.tv_time);
         tvDuration = findViewById(R.id.tv_duration);
+        anh_nhac = findViewById(R.id.anh_nhac);
         sbTime = findViewById(R.id.sb_time);
         sbVolume = findViewById(R.id.sb_volume);
         imgPlay = findViewById(R.id.img_play);
         imgLui = findViewById(R.id.imgLui);
         imgTien = findViewById(R.id.imgTien);
+        baiHatDAO = new BaiHatDAO(getApplicationContext());
 
         // Khởi tạo songList nếu chưa được khởi tạo
         if (songList == null) {
-            songList = new ArrayList<>();
-            songList.add(new ListSong("Em đồng ý", "kkkkk", R.drawable.anh_1, R.raw.emdongy,1,1));
-            songList.add(new ListSong("Gió", "ppppp", R.drawable.anh_2, R.raw.gio_lofi,1,1));
-            songList.add(new ListSong("Là anh", "gggggg", R.drawable.anh_3, R.raw.la_anh,1,1));
-            songList.add(new ListSong("Một người đánh mất một người", "sssss", R.drawable.anh_4, R.raw.mot_nguoi_danh_mat_mot_nguoi,1,1));
-            songList.add(new ListSong("Từng quen", "ooooo", R.drawable.anh_5, R.raw.tung_quen,1,1));
+            songList = baiHatDAO.getAll();
+            Log.e("Gyaaaaatttt",String.valueOf(songList.size()));
         }
-        imgLui.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (musicPlayer != null && !songList.isEmpty()) {
-                    currentSongIndex = (currentSongIndex - 1 + songList.size()) % songList.size();
-                    playSelectedSong();
-                }
+        imgLui.setOnClickListener(v -> {
+            if (musicPlayer != null && !songList.isEmpty()) {
+                currentSongIndex = (currentSongIndex - 1 + songList.size()) % songList.size();
+                playSelectedSong();
             }
         });
 
-        imgTien.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (musicPlayer != null && !songList.isEmpty()) {
-                    currentSongIndex = (currentSongIndex + 1) % songList.size();
-                    playSelectedSong();
-                }
+        imgTien.setOnClickListener(v -> {
+            if (musicPlayer != null && !songList.isEmpty()) {
+                currentSongIndex = (currentSongIndex + 1) % songList.size();
+                playSelectedSong();
             }
         });
 
-        imgPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (musicPlayer != null) {
-                    if (musicPlayer.isPlaying()) {
-                        musicPlayer.pause();
-                        isPlaying = false;
-                    } else {
-                        musicPlayer.start();
-                        isPlaying = true;
-                    }
-                    updatePlayButton();
+        imgPlay.setOnClickListener(v -> {
+            if (musicPlayer != null) {
+                if (musicPlayer.isPlaying()) {
+                    musicPlayer.pause();
+                    isPlaying = false;
+                } else {
+                    musicPlayer.start();
+                    isPlaying = true;
                 }
+                updatePlayButton();
             }
         });
 
@@ -96,12 +97,40 @@ public class Choinhac extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("nhac")) {
-            ListSong selectedSong = (ListSong) intent.getSerializableExtra("nhac");
+            selectedSong = (BaiHat) intent.getSerializableExtra("nhac");
+            int albumId = selectedSong.getIdAlbum();
+            for (int i = 0; i < songList.size(); i++) {
+                if (songList.get(i).getIdBaiHat() == selectedSong.getIdBaiHat()) {
+                    currentSongIndex = i;
+                    break;
+                }
+            }
+            baiHatDAO.tangSoLuotNghe(selectedSong);
 
-            tvNhac.setText(selectedSong.getSong());
-            tvTacgia.setText(selectedSong.getSinger());
+            List<BaiHat> filteredList = new ArrayList<>();
+            for (BaiHat song : songList) {
+                if (song.getIdAlbum() == albumId) {
+                    filteredList.add(song);
+                }
+            }
 
-            createAndStartMediaPlayer(selectedSong.getFile());
+            caSiDAO = new CaSiDAO(getApplicationContext());
+            caSi = caSiDAO.getID(String.valueOf(selectedSong.getIdCaSi()));
+
+            lichSuDAO = new LichSuDAO(getApplicationContext());
+            lichSu = new LichSu();
+            lichSu.setIdBaiHat(selectedSong.getIdBaiHat());
+            currentTime = Calendar.getInstance().getTime();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            String formattedTime = sdf.format(currentTime);
+            lichSu.setIdCaSi(caSi.getIdCaSi());
+            lichSu.setThoiGianNghe(formattedTime);
+            lichSuDAO.playSong(lichSu);
+
+            tvNhac.setText(selectedSong.getTenBaiHat());
+            tvTacgia.setText(caSi.getTenCaSi());
+            anh_nhac.setImageResource(selectedSong.getAnhBaiHat());
+            createAndStartMediaPlayer(selectedSong.getDuongDan());
 
             String duration = millisecondsToString(musicPlayer.getDuration());
             if (tvDuration != null) {
@@ -110,7 +139,14 @@ public class Choinhac extends AppCompatActivity {
 
             sbTime.setMax(musicPlayer.getDuration());
         }
-
+        if (intent != null && intent.hasExtra("filteredSongs")) {
+            List<BaiHat> filteredList = (List<BaiHat>) intent.getSerializableExtra("filteredSongs");
+            if (!filteredList.isEmpty()) {
+                selectedSong = filteredList.get(0);
+                tvNhac.setText(selectedSong.getTenBaiHat());
+                createAndStartMediaPlayer(selectedSong.getDuongDan());
+            }
+        }
         sbVolume.setProgress(50);
         sbVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -228,20 +264,45 @@ public class Choinhac extends AppCompatActivity {
     }
 
     private void playSelectedSong() {
-        if (!songList.isEmpty() && currentSongIndex >= 0 && currentSongIndex < songList.size()) {
-            ListSong selectedSong = songList.get(currentSongIndex);
-            tvNhac.setText(selectedSong.getSong());
-            tvTacgia.setText(selectedSong.getSinger());
+        if (!songList.isEmpty()) {
+            if (currentSongIndex >= 0 && currentSongIndex < songList.size()) {
+                selectedSong = songList.get(currentSongIndex);
+                for (int i = 0; i < songList.size(); i++) {
+                    if (songList.get(i).getIdBaiHat() == selectedSong.getIdBaiHat()) {
+                        currentSongIndex = i;
+                        break;
+                    }
+                }
+                baiHatDAO.tangSoLuotNghe(selectedSong);
+                // Set the details of the currently playing song
+                tvNhac.setText(selectedSong.getTenBaiHat());
+                caSiDAO = new CaSiDAO(getApplicationContext());
+                caSi = caSiDAO.getID(String.valueOf(selectedSong.getIdCaSi()));
+                tvTacgia.setText(caSi.getTenCaSi());
+                anh_nhac.setImageResource(selectedSong.getAnhBaiHat());
 
-            releaseMediaPlayer();
-            createAndStartMediaPlayer(selectedSong.getFile());
+                lichSuDAO = new LichSuDAO(getApplicationContext());
+                lichSu = new LichSu();
+                lichSu.setIdBaiHat(selectedSong.getIdBaiHat());
+                currentTime = Calendar.getInstance().getTime();
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                String formattedTime = sdf.format(currentTime);
+                lichSu.setIdCaSi(caSi.getIdCaSi());
+                lichSu.setThoiGianNghe(formattedTime);
+                lichSuDAO.playSong(lichSu);
 
-            String duration = millisecondsToString(musicPlayer.getDuration());
-            if (tvDuration != null) {
-                tvDuration.setText(duration);
+                releaseMediaPlayer();
+                createAndStartMediaPlayer(selectedSong.getDuongDan());
+
+                String duration = millisecondsToString(musicPlayer.getDuration());
+                if (tvDuration != null) {
+                    tvDuration.setText(duration);
+                }
+                sbTime.setMax(musicPlayer.getDuration());
+            } else {
+                currentSongIndex = 0;
+                playSelectedSong();
             }
-
-            sbTime.setMax(musicPlayer.getDuration());
         }
     }
 }

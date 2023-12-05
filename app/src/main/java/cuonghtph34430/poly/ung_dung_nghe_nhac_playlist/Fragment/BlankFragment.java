@@ -38,33 +38,36 @@ import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ArtistAdapter;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ListSongAdapter;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.MusicListAdapter;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Choinhac;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.AlbumDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.BaiHatDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.CaSiDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.Album;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.AudioModel;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.CaSi;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.ListSong;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 
 public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGlideClickListener, AlbumAdapter.OnAlbumGlideClickListener{
     private ViewPager2 viewPager;
-    private int[] images = {R.drawable.bgc, R.drawable.pl2, R.drawable.sinhto};
+    private final int[] images = {R.drawable.anh_10, R.drawable.anh_11, R.drawable.anh_12};//Tôi đặt ảnh slider ở đây
     private int currentPage = 0;
     private Timer timer;
     private final long DELAY_MS = 2000;
     private final long PERIOD_MS = 3000;
-    MusicListAdapter musicListAdapter;
-    ArrayList<AudioModel> songList;
     RecyclerView recycle1,recycle2;
     Context context;
     ArtistAdapter artistAdapter;
     AlbumAdapter albumAdapter;
     ListSongAdapter nhacAdapter;
-    ListSong nhac;
-    ArrayList<ListSong> listN;
+    List<BaiHat> listN;
     ListView lv_nhac;
     View view;
     TextView btnXemAlbum,btnXemNgheSi;
-    FragmentContainer fragmentManager;
+    CaSiDAO caSiDAO;
+    AlbumDAO albumDAO;
+    int start = 0;
+    int limit = 20;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -103,42 +106,29 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recycle2.setLayoutManager(linearLayoutManager);
-        List<CaSi> artistUrls = new ArrayList<>();
-        artistUrls.add(new CaSi(1,"Ca Sĩ 1",R.drawable.anh_4));
-        artistUrls.add(new CaSi(2,"Ca Sĩ 2",R.drawable.anh_2));
-        artistUrls.add(new CaSi(3,"Ca Sĩ 3",R.drawable.anh_3));
-        artistUrls.add(new CaSi(4,"Ca Sĩ 4",R.drawable.anh_1));
-        artistUrls.add(new CaSi(5,"Ca Sĩ 5",R.drawable.anh_3));
-        artistAdapter = new ArtistAdapter(artistUrls,getContext());
+        caSiDAO = new CaSiDAO(getContext());
+        List<CaSi> artistUrls = caSiDAO.getAll();
+        artistAdapter = new ArtistAdapter(artistUrls,getContext(),this);
         recycle2.setAdapter(artistAdapter);
-        List<Album> albumUrls = new ArrayList<>();
-        albumUrls.add(new Album(1,"Album 1",R.drawable.anh_3));
-        albumUrls.add(new Album(2,"Album 2",R.drawable.anh_1));
-        albumUrls.add(new Album(3,"Album 3",R.drawable.anh_2));
-        albumUrls.add(new Album(4,"Album 4",R.drawable.anh_4));
-        albumUrls.add(new Album(5,"Album 5",R.drawable.anh_3));
-        albumAdapter = new AlbumAdapter(getContext(), albumUrls);
+        albumDAO = new AlbumDAO(getContext());
+        List<Album> albumUrls = albumDAO.getAlbum();
+        albumAdapter = new AlbumAdapter(getContext(), albumUrls, this);
         recycle1.setAdapter(albumAdapter);
 
         lv_nhac = view.findViewById(R.id.listView);
-
+        BaiHatDAO baiHatDAO = new BaiHatDAO(getContext());
         context = getContext(); // hoặc getActivity()
-        listN = new ArrayList<>();
-        listN.add(new ListSong("Em đồng ý","kkkkk",R.drawable.anh_1,R.raw.emdongy,1,1));
-        listN.add(new ListSong("Gió","ppppp",R.drawable.anh_2,R.raw.gio_lofi,2,2));
-        listN.add(new ListSong("Là anh","gggggg",R.drawable.anh_3,R.raw.la_anh,3,3));
-        listN.add(new ListSong("Một người đánh mất một người","sssss",R.drawable.anh_4,R.raw.mot_nguoi_danh_mat_mot_nguoi,4,4));
-        listN.add(new ListSong("Từng quen","ooooo",R.drawable.anh_5,R.raw.tung_quen,5,5));
-
-        nhacAdapter = new ListSongAdapter(context,listN);
+        listN = baiHatDAO.getAll();
+        List<BaiHat> displayedItemList = listN.subList(start, Math.min(listN.size(), start + limit));
+        nhacAdapter = new ListSongAdapter(context,displayedItemList);
         lv_nhac.setAdapter(nhacAdapter);
 
         lv_nhac.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListSong nhac = listN.get(position);
+                BaiHat nhac = listN.get(position);
                 Intent openMusicPlayer = new Intent(getContext(), Choinhac.class);
-                openMusicPlayer.putExtra("nhac", nhac); // Truyền đối tượng ListSong thay vì chỉ truyền file nhạc
+                openMusicPlayer.putExtra("nhac", nhac); // Truyền đối tượng BaiHat thay vì chỉ truyền file nhạc
                 startActivity(openMusicPlayer);
             }
         });
@@ -181,37 +171,37 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
 
     @Override
     public void onAlbumGlideClick(int albumId, String albumTitle, int albumCover) {
-        BlankFragment3 fragment3 = new BlankFragment3();
+        Fragment_All_song fragment_all_song = new Fragment_All_song();
         Bundle args = new Bundle();
         args.putInt("albumId", albumId);
         args.putString("albumTitle", albumTitle);
         args.putInt("albumCover", albumCover);
-        fragment3.setArguments(args);
+        fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment3);
+        transaction.replace(R.id.fragment1, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }
 
     @Override
     public void onArtistGlideClick(int artistId, String artistTitle, int artistCover) {
-        BlankFragment3 fragment3 = new BlankFragment3();
+        Fragment_All_song fragment_all_song = new Fragment_All_song();
         Bundle args = new Bundle();
         args.putInt("artistId", artistId);
         args.putString("artistTitle", artistTitle);
         args.putInt("artistCover", artistCover);
-        fragment3.setArguments(args);
+        fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment3);
+        transaction.replace(R.id.fragment1, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }
 
     private class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
 
-        private int[] images;
+        private final int[] images;
 
         ImageAdapter(int[] images) {
             this.images = images;
@@ -245,11 +235,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
     }
     boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == PackageManager.PERMISSION_GRANTED;
     }
     void requestPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {

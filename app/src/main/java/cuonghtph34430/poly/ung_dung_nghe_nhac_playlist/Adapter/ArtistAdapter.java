@@ -20,13 +20,14 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ViewHolder
     public interface OnArtistGlideClickListener {
         void onArtistGlideClick(int artistId,String artistTitle,int artistCover);
     }
-    private List<CaSi> artistUrls; // List of URLs of artist images
-    private Context context;
-    private OnArtistGlideClickListener onArtistGlideClickListener;
+    private final List<CaSi> artistUrls; // List of URLs of artist images
+    private final Context context;
+    private final OnArtistGlideClickListener onArtistGlideClickListener;
 
-    public ArtistAdapter(List<CaSi> artistUrls, Context context) {
+    public ArtistAdapter(List<CaSi> artistUrls, Context context,OnArtistGlideClickListener onArtistGlideClickListener) {
         this.artistUrls = artistUrls;
         this.context = context;
+        this.onArtistGlideClickListener = onArtistGlideClickListener;
     }
 
     @NonNull
@@ -52,7 +53,7 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return artistUrls.size();
+        return 5;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

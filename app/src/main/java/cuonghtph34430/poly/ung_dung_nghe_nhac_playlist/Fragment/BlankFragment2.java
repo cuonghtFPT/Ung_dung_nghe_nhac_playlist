@@ -20,20 +20,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ListSongAdapter;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.ListSong;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.BaiHatDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class BlankFragment2 extends Fragment {
-    private List<ListSong> fullSongList;
+    private List<BaiHat> fullSongList;
     private ListSongAdapter adapter;
     private ListView listView;
-    private List<ListSong> allSongs;
+    private List<BaiHat> allSongs;
     private EditText editText;
     private ImageButton searchButton;
+    BaiHatDAO baiHatDAO;
     public interface OnSongClickListener {
-        void onSongClick(ListSong selectedSong);
+        void onSongClick(BaiHat selectedSong);
     }
-
     private OnSongClickListener songClickListener;
 
     public void setOnSongClickListener(OnSongClickListener listener) {
@@ -84,7 +85,7 @@ public class BlankFragment2 extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ListSong selectedSong = fullSongList.get(position);
+                BaiHat selectedSong = fullSongList.get(position);
                 if (songClickListener != null) {
                     songClickListener.onSongClick(selectedSong);
                 }
@@ -92,31 +93,23 @@ public class BlankFragment2 extends Fragment {
         });
     }
 
-    private List<ListSong> createSongList() {
-        List<ListSong> songs = new ArrayList<>();
-        songs.add(new ListSong("Em đồng ý", "Singer 1", R.drawable.anh_1, R.raw.emdongy,1,1));
-        songs.add(new ListSong("Là anh", "Singer 2", R.drawable.anh_2, R.raw.la_anh,1,1));
-        songs.add(new ListSong("Gió", "Singer 1", R.drawable.anh_1, R.raw.gio_lofi,1,1));
-        songs.add(new ListSong("Từng quen", "Singer 2", R.drawable.anh_2, R.raw.tung_quen,1,1));
-        songs.add(new ListSong("Một người đánh mất một người", "Singer 1", R.drawable.anh_1, R.raw.mot_nguoi_danh_mat_mot_nguoi,1,1));
-        // ...
+    private List<BaiHat> createSongList() {
+        baiHatDAO = new BaiHatDAO(getContext());
+        List<BaiHat> songs = baiHatDAO.getAll();
         return songs;
     }
 
     private void filter(String searchText) {
-        List<ListSong> filteredList = new ArrayList<>();
-
+        List<BaiHat> filteredList = new ArrayList<>();
         if (searchText.isEmpty()) {
             filteredList.addAll(allSongs);
         } else {
-            for (ListSong song : allSongs) {
-                if (song.getSong().toLowerCase().contains(searchText)
-                        || song.getSinger().toLowerCase().contains(searchText)) {
+            for (BaiHat song : allSongs) {
+                if (song.getTenBaiHat().toLowerCase().contains(searchText)) {
                     filteredList.add(song);
                 }
             }
         }
-
         adapter.updateList(filteredList);
     }
 }

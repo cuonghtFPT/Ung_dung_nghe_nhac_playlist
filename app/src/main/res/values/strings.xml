@@ -1,5 +1,34 @@
 <resources>
-    <string name="app_name">Ung_dung_nghe_nhac_playlist</string>
+    <string name="app_name">MyPlayer</string>
     <string name="Open">Mở</string>
     <string name="Close">Đóng</string>
+    <string name="feedbacks">Phản Hồi</string>
+    <string name="see_all">Xem tất cả</string>
+    <string name="artist">Nghệ Sĩ</string>
+    <string name="homepage">Trang chủ</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="name">Họ và Tên</string>
+    <string name="pass">Mật Khẩu</string>
+    <string name="sign_up">Đăng ký</string>
+    <string name="already_a_user">Đã Là Người Dùng ?</string>
+    <string name="register">Đăng Nhập</string>
+    <string name="home">Trang chủ</string>
+    <string name="all_songs">Tất Cả Bài</string>
+    <string name="new_songs">Bài mới</string>
+    <string name="popular_songs">Bài Nổi Tiếng</string>
+    <string name="contact">Liên Hệ</string>
+    <string name="featured_songs">Bài Kết Hợp</string>
+    <string name="personal">Cá Nhân</string>
+    <string name="null_input">K được để trống thông tin </string>
+    <string name="sign_in_successfully">Đăng nhập thành công</string>
+    <string name="fail_message">User và pass không đúng.Đăng nhập thất bại</string>
+    <string name="history">Lịch Sử</string>
+    <string name="Genre">Thể Loại</string>
+    <string name="Chart">Bảng Xếp hạng</string>
+    <string name="romance">Tình Cảm</string>
+    <string name="dance">Nhảy</string>
+    <string name="meditate">Thiền</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -20,13 +20,14 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.ViewHolder> 
     public interface OnAlbumGlideClickListener {
         void onAlbumGlideClick(int albumId,String albumTitle,int albumCover);
     }
-    private List<Album> albumUrls; // List of URLs of artist images
-    private Context context;
+    private final List<Album> albumUrls; // List of URLs of artist images
+    private final Context context;
+    private final OnAlbumGlideClickListener onAlbumGlideClickListener;
 
-
-    public AlbumAdapter(Context context, List<Album> albumUrls) {
+    public AlbumAdapter(Context context, List<Album> albumUrls,OnAlbumGlideClickListener onAlbumGlideClickListener) {
         this.context = context;
         this.albumUrls = albumUrls;
+        this.onAlbumGlideClickListener = onAlbumGlideClickListener;
     }
     @NonNull
     @Override
@@ -42,11 +43,16 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.ViewHolder> 
                 .load(album.getAnhAlbum())
                 .placeholder(R.drawable.anh_nen)
                 .into(holder.artistImage);
+        holder.itemView.setOnClickListener(v -> {
+            if (onAlbumGlideClickListener != null) {
+                onAlbumGlideClickListener.onAlbumGlideClick(album.getIdAlbum(),album.getTenAlbum(),album.getAnhAlbum());
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return albumUrls.size();
+        return 5;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

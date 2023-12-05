@@ -31,7 +31,7 @@ public class fragment_contact extends Fragment {
         // Ánh xạ các phần tử trong layout
         CircleImageView profileImage = view.findViewById(R.id.profile_image);
         faceImage = view.findViewById(R.id.face_iamge);
-        emailImage = view.findViewById(R.id.email_iamge);
+        emailImage = view.findViewById(R.id.gmail_iamge);
         phoneImage = view.findViewById(R.id.phone_iamge);
         zaloImage = view.findViewById(R.id.zalo_iamge);
         txtContact = view.findViewById(R.id.txtContact);

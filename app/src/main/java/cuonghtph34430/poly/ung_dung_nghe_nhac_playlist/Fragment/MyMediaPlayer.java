@@ -2,7 +2,8 @@ package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment;
 
 import android.media.MediaPlayer;
 
-public class MyMediaPlayer {
+public class
+MyMediaPlayer {
     static MediaPlayer instance;
 
     public static MediaPlayer getInstance(){

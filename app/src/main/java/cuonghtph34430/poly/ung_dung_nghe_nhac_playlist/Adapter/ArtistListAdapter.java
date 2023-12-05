@@ -19,9 +19,9 @@ public class ArtistListAdapter extends RecyclerView.Adapter<ArtistListAdapter.Vi
     public interface OnArtistClickListener {
         void onArtistClick(int artistId,String artistTitle,int artistCover);
     }
-    private List<CaSi> artisStrings;
-    private Context context;
-    private OnArtistClickListener onArtistClickListener;
+    private final List<CaSi> artisStrings;
+    private final Context context;
+    private final OnArtistClickListener onArtistClickListener;
 
     public ArtistListAdapter(List<CaSi> artisStrings, Context context, OnArtistClickListener onArtistClickListener) {
         this.artisStrings = artisStrings;

@@ -26,6 +26,8 @@
         <activity
             android:name=".Login.MainActivity"
             android:exported="false" />
+        <activity android:name="cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.fragment_contact"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Login.Log_in"
             android:exported="true">

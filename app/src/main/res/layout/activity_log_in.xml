@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="@string/register"
                 android:textSize="36sp"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -44,8 +44,9 @@
                 android:background="@drawable/ledanme"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Name"
-                android:drawableLeft="@drawable/baseline_person_24"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:drawableStart="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"
                 />
@@ -56,9 +57,9 @@
                 android:background="@drawable/ledanme"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Pass"
+                android:hint="@string/pass"
                 android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawableStart="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"
                 />
@@ -66,15 +67,12 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Sing Up"
+                android:text="@string/register"
                 android:id="@+id/sign_button"
                 android:textSize="18sp"
                 android:backgroundTint="#8692F7"
                 android:layout_marginTop="30dp"
                 app:cornerRadius="20dp"/>
-            />
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/loginRead"
-                    android:text="Already an user ?"
+                    android:text="@string/already_a_user"
                     android:layout_gravity="center"
                     android:padding="8dp"
                     android:layout_marginTop="10dp"
@@ -95,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/loginRegister"
-                    android:text="Register"
+                    android:text="@string/sign_up"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:padding="8dp"

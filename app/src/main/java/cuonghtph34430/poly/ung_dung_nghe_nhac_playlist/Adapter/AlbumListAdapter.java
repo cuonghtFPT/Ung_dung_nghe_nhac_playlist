@@ -17,9 +17,9 @@ public class AlbumListAdapter extends RecyclerView.Adapter<AlbumListAdapter.View
     public interface OnAlbumClickListener {
         void onAlbumClick(int albumId,String albumTitle,int albumCover);
     }
-    private List<Album> albumList;
-    private Context context;
-    private OnAlbumClickListener onAlbumClickListener;
+    private final List<Album> albumList;
+    private final Context context;
+    private final OnAlbumClickListener onAlbumClickListener;
 
     public AlbumListAdapter(List<Album> albumList, Context context, OnAlbumClickListener onAlbumClickListener) {
         this.albumList = albumList;

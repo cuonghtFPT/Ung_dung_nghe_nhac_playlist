@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyPlayer</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="feedbacks">Feedbacks</string>
+    <string name="see_all">See all</string>
+    <string name="artist">Artists</string>
+    <string name="homepage">Homepage</string>
+    <string name="search">Search</string>
+    <string name="name">Name</string>
+    <string name="pass">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_a_user">Already A User ?</string>
+    <string name="register">Sign In</string>
+    <string name="home">Home</string>
+    <string name="all_songs">All Songs</string>
+    <string name="new_songs">New Songs</string>
+    <string name="popular_songs">Popular Songs</string>
+    <string name="contact">Contact</string>
+    <string name="featured_songs">Featured Songs</string>
+    <string name="personal">Personal</string>
+    <string name="null_input">Null Input</string>
+    <string name="sign_in_successfully">You have sign in successfully</string>
+    <string name="fail_message">Invalid Username and Password.Sign in failed</string>
+    <string name="history">History</string>
+    <string name="Genre">Genre</string>
+    <string name="Chart">Chart</string>
+    <string name="romance">Romance</string>
+    <string name="dance">Dance</string>
+    <string name="meditate">Meditate</string>
+    <string name="english">English</string>
+    <string name="vietnamese">Vietnamese</string>
+</resources>

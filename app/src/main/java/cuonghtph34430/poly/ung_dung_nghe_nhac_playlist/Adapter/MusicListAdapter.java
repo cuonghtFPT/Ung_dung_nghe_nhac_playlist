@@ -18,7 +18,7 @@ import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.AudioModel;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.ViewHolderOfMusicList> {
-    private Context context;
+    private final Context context;
     private List<AudioModel> list = new ArrayList<>();
 
     public MusicListAdapter(Context context, List<AudioModel> list) {

@@ -97,7 +97,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/Comment"
         android:layout_below="@+id/Email"
         >
 
@@ -110,15 +109,4 @@
             android:maxLines="1"
             />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Comment"
-        android:text="Send FeedBack"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/btnSendBack"
-        />
-
 </RelativeLayout>

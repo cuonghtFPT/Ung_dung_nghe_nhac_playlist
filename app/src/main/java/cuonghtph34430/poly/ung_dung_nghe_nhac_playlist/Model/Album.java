@@ -1,17 +1,20 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model;
 
-public class Album {
+public class
+
+Album {
     private int IdAlbum;
     private String TenAlbum;
     private int AnhAlbum;
-
+    private int IdCaSi;
     public Album() {
     }
 
-    public Album(int idAlbum, String tenAlbum, int anhAlbum) {
+    public Album(int idAlbum, String tenAlbum, int anhAlbum, int idCaSi) {
         IdAlbum = idAlbum;
         TenAlbum = tenAlbum;
         AnhAlbum = anhAlbum;
+        IdCaSi = idCaSi;
     }
 
     public int getIdAlbum() {
@@ -36,6 +39,14 @@ public class Album {
 
     public void setAnhAlbum( int anhAlbum) {
         AnhAlbum = anhAlbum;
+    }
+
+    public int getIdCaSi() {
+        return IdCaSi;
+    }
+
+    public void setIdCaSi(int idCaSi) {
+        IdCaSi = idCaSi;
     }
 }
 

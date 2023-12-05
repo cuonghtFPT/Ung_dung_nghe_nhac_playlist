@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Database.MyPlayerDAO;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.MyPlayerDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.Login;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
@@ -48,7 +48,7 @@ public class Register extends AppCompatActivity {
                 if (myPlayerDAO.checkIfEmailExists(txtemail)) {
                     Toast.makeText(Register.this, "Địa chỉ email đã được đăng ký", Toast.LENGTH_SHORT).show();
                     return;
-                };
+                }
                 Login login = new Login(txtuser, txtemail, txtpass);
                 if (myPlayerDAO.addsig(login) > 0) {
                     Toast.makeText(Register.this, "Đăng Ký Thành Công!", Toast.LENGTH_SHORT).show();
