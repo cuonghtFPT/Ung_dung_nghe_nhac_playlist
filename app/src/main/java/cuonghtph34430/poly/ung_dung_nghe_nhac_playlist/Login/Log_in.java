@@ -9,7 +9,6 @@ import android.content.res.Configuration;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,44 +45,39 @@ public class Log_in extends AppCompatActivity {
         button=findViewById(R.id.sign_button);
         textView=findViewById(R.id.loginRead);
         txtregister=findViewById(R.id.loginRegister);
-        txtregister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Log_in.this, Register.class);
-                startActivity(intent);
-            }
+        txtregister.setOnClickListener(v -> {
+            Intent intent = new Intent(Log_in.this, Register.class);
+            startActivity(intent);
         });
         myPlayerDAO = new MyPlayerDAO(this);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String txtus = user.getText().toString();
-                String txtpsw = pass.getText().toString();
-                String text1 = getString( R.string.null_input);
-                String text2 = getString(R.string.sign_in_successfully);
-                String text3 = getString(R.string.fail_message);
-                if (TextUtils.isEmpty(txtus) || TextUtils.isEmpty(txtpsw)) {
-                    Toast.makeText(Log_in.this, text1, Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(adminDAO.checkDangNhap(txtus,txtpsw)) {
-                    startActivity(new Intent(Log_in.this, MainActivity.class));
-                    Toast.makeText(Log_in.this,text2,Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(Log_in.this,text3,Toast.LENGTH_SHORT).show();
-                }
+        button.setOnClickListener(v -> {
+            String txtus = user.getText().toString();
+            String txtpsw = pass.getText().toString();
+            String text1 = getString( R.string.null_input);
+            String text2 = getString(R.string.sign_in_successfully);
+            String text3 = getString(R.string.fail_message);
+            if (TextUtils.isEmpty(txtus) || TextUtils.isEmpty(txtpsw)) {
+                Toast.makeText(Log_in.this, text1, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if(adminDAO.checkDangNhap(txtus,txtpsw)) {
+                startActivity(new Intent(Log_in.this, MainActivity.class));
+                Toast.makeText(Log_in.this,text2,Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(Log_in.this,text3,Toast.LENGTH_SHORT).show();
+            }
 
-                Boolean login = myPlayerDAO.checklogin(txtus, txtpsw);
-                if (!login) {
-                    // Hiển thị thông báo "Tên đăng nhập hoặc mật khẩu không đúng"
-                    Toast.makeText(getApplicationContext(), text3, Toast.LENGTH_SHORT).show();
-                } else {
-                    // Hiển thị thông báo "Đăng nhập thành công"
-                    Toast.makeText(getApplicationContext(), text2, Toast.LENGTH_SHORT).show();
-                    // Chuyển đến màn hình chính
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                }
+            boolean login = myPlayerDAO.checklogin(txtus, txtpsw);
+            if (!login) {
+                // Hiển thị thông báo "Tên đăng nhập hoặc mật khẩu không đúng"
+                Toast.makeText(getApplicationContext(), text3, Toast.LENGTH_SHORT).show();
+            } else {
+                // Hiển thị thông báo "Đăng nhập thành công"
+                Toast.makeText(getApplicationContext(), text2, Toast.LENGTH_SHORT).show();
+                // Chuyển đến màn hình chính
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.putExtra("isAdmin", true);
+                startActivity(intent);
             }
         });
         txtregister.setPaintFlags(txtregister.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
