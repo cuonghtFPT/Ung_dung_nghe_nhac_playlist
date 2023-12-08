@@ -31,4 +31,17 @@
     <string name="meditate">Thiền</string>
     <string name="english">Tiếng Anh</string>
     <string name="vietnamese">Tiếng Việt</string>
+    <string name="language">Ngôn Ngữ</string>
+    <string name="help">Trợ Giúp</string>
+    <string name="notification">Thông Báo</string>
+    <string name="setting">Cài Đặt</string>
+    <string name="version">Phiên Bản</string>
+    <string name="sign_out">Đăng Xuất</string>
+    <string name="libary">Thư Viện</string>
+    <string name="lofi">Lofi</string>
+    <string name="invalid_email">Email không hợp lệ</string>
+    <string name="email_has_already_been_use">Địa chỉ email đã được đăng ký</string>
+    <string name="sign_up_successfully">Đăng Ký Thành Công!</string>
+    <string name="username_already_been_taken">Tên đăng nhập đã tồn tại</string>
+    <string name="please_fill_out_all_the_form">Vui lòng điền đầy đủ thông tin</string>
 </resources>

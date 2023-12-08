@@ -14,7 +14,7 @@ public class DBhelper extends SQLiteOpenHelper {
     public DBhelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
-    private int anh_6,anh_14,
+    private int anh_14,
             anh_15,anh_16,anh_17,anh_18,anh_19,anh_20,anh_21,
             anh_22;
     private int nhac_1, nhac_2, nhac_3,nhac_4,nhac_5,nhac_6,nhac_7,nhac_8,
@@ -114,7 +114,7 @@ public class DBhelper extends SQLiteOpenHelper {
         db.execSQL(createTableLichSuNghe);
 
         String insertTableBaiHat1 = "INSERT INTO BaiHat(TenBaiHat,AnhBaiHat,DuongDan,IdTheLoai,IdAlbum,IdCaSi)" +
-                    "VALUES('Em đồng ý', " +anh_20+ " , " +nhac_44+ " ,1,0,8),('HƠN CẢ YÊU', " +anh_20+ " , " +nhac_48+ " ,1,0,8)," +
+                "VALUES('Em đồng ý', " +anh_20+ " , " +nhac_44+ " ,1,0,8),('HƠN CẢ YÊU', " +anh_20+ " , " +nhac_48+ " ,1,0,8)," +
                 "('VƯỜN HOA CON CÁ', " +anh_21+ " , " +nhac_46+ " ,1,0,9),('RỒI TA SẼ NGẮM PHÁO HOA CÙNG NHAU', " +anh_21+ " , " +nhac_47+ " ,1,0,9)," +
                 "('Một người đánh mất một người', " +anh_21+ " , " +nhac_45+ " ,1,0,9),('Energy', " +anh_17+ " , " + nhac_1 + " ,3,0,3)," +
                 "('Breeze', " +anh_17+ " , " + nhac_2 + " ,1,0,3),('Summersong', " +anh_17+ " , " + nhac_3 + " ,3,6,3)," +
@@ -132,9 +132,9 @@ public class DBhelper extends SQLiteOpenHelper {
                 "('Dreams', " +anh_15+ " , " +nhac_26+ " ,6,8,1),('Elevate', " +anh_15+ " , " +nhac_27+ " ,6,8,1)," +
                 "('Hey', " +anh_15+ " , " +nhac_28+ " ,6,8,1),('Better Days', " +anh_15+ " , " +nhac_29+ " ,6,8,1)," +
                 "('Dubstep', " +anh_15+ " , " +nhac_30+ " ,6,8,1),('Memories', " +anh_15+ " , " +nhac_31+ " ,6,8,1)," +
-                "('Moose', " +anh_15+ " , " + nhac_32 + " ,6,1,1),('empty', " +anh_19+ " , " +nhac_33+ " ,4,3,6)," +
+                "('Moose', " +anh_15+ " , " + nhac_32 + " ,6,8,1),('empty', " +anh_19+ " , " +nhac_33+ " ,4,3,6)," +
                 "('together', " +anh_19+ " , " + nhac_34 + " ,4,3,6),('mug', " +anh_19+ " , " +nhac_35+ " ,4,3,6)," +
-                "('biscuit', " +anh_19+ " , " + nhac_36 + " ,4,3,6),('train covered in white', " +anh_19+ " , " +nhac_37+ " ,4,7,6)," +
+                "('biscuit', " +anh_19+ " , " + nhac_36 + " ,4,3,6),('train covered in white', " +anh_19+ " , " +nhac_37+ " ,4,3,6)," +
                 "('Business Background Music', " +anh_22+ " , " + nhac_38 + " ,5,7,7),('Inspire', " +anh_22+ " , " +nhac_39+ " ,5,7,7)," +
                 "('Motivational Corporate', " +anh_22+ " , " + nhac_40 + " ,5,7,7),('Uplifting Corporate', " +anh_22+ " , " +nhac_41+ " ,5,7,7)," +
                 "('Uplifting And Inspiring Acoustic', " +anh_22+ " , " + nhac_42 + " ,5,7,7),('Uplifting Inspiration Ccorporate', " +anh_22+ " , " +nhac_43+ " ,5,7,7)";
@@ -198,7 +198,6 @@ public class DBhelper extends SQLiteOpenHelper {
         nhac_48 = R.raw.hon_ca_yeu_duc_phuc_official_music_video;
     }
     public void LuuAnh(){
-        anh_6 = R.drawable.anh_6;
         anh_14 = R.drawable.anh_14;
         anh_15 = R.drawable.img_album8;
         anh_16 = R.drawable.img_thefatrat;
@@ -210,3 +209,4 @@ public class DBhelper extends SQLiteOpenHelper {
         anh_22 = R.drawable.img_wavecont;
     }
 }
+
