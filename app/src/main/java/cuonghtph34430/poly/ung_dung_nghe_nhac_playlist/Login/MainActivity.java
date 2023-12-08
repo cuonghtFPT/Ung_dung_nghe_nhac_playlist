@@ -28,7 +28,6 @@ import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_All_son
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_Lich_Su;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_The_Loai;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_featured_songs;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_home;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_nhan_feedback;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.Fragment_person;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.fragment_contact;
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment2.On
     BottomNavigationView bottomNavigationView;
     FrameLayout frameLayout;
     DrawerLayout drawerLayout;
-
+    NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements BlankFragment2.On
 
         Toolbar toolbar = findViewById(R.id.toobar);
         frameLayout = findViewById(R.id.frameLayout);
-        NavigationView navigationView = findViewById(R.id.navigationView);
+        navigationView = findViewById(R.id.navigationView);
         drawerLayout = findViewById(R.id.drawlayout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setBackgroundResource(R.drawable.gradient_green_transparent);
@@ -60,36 +59,38 @@ public class MainActivity extends AppCompatActivity implements BlankFragment2.On
         actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
         actionBarDrawerToggle.syncState();
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @SuppressLint("NonConstantResourceId")
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = null;
-                if (item.getItemId() == R.id.qlHome) {
-                    fragment = new BlankFragment();
-                } else if (item.getItemId() == R.id.qlAllSong) {
-                    fragment = new Fragment_All_song();
-                } else if (item.getItemId() == R.id.qlFeaturedSong) {
-                    fragment = new Fragment_featured_songs();
-                } else if (item.getItemId() == R.id.qlPopularSong) {
-                    fragment = new fragment_popular_songs();
-                } else if (item.getItemId() == R.id.qlNewSong) {
-                    fragment = new fragment_new_songs();
-                } else if (item.getItemId() == R.id.qlTheLoai) {
-                    fragment = new Fragment_The_Loai();
-                } else if (item.getItemId() == R.id.qlBangXepHang) {
-                    fragment = new BlankFragment3();
-                } else if (item.getItemId() == R.id.qlContact) {
-                    fragment = new fragment_contact();
-                } else if (item.getItemId() == R.id.qlFeedback) {
-                    fragment = new Fragment_nhan_feedback();
-                }
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
-                drawerLayout.closeDrawer(GravityCompat.START);
-                toolbar.setTitle(item.getTitle());
-                return false;
+        boolean isAdmin = getIntent().getBooleanExtra("isAdmin", false);
+        if(isAdmin){
+            bottomNavigationView.getMenu().findItem(R.id.history).setVisible(false);
+        }else {
+            bottomNavigationView.getMenu().findItem(R.id.history).setVisible(true);
+        }
+        navigationView.setNavigationItemSelectedListener(item -> {
+            Fragment fragment = null;
+            if (item.getItemId() == R.id.qlHome) {
+                fragment = new BlankFragment();
+            } else if (item.getItemId() == R.id.qlAllSong) {
+                fragment = new Fragment_All_song();
+            } else if (item.getItemId() == R.id.qlFeaturedSong) {
+                fragment = new Fragment_featured_songs();
+            } else if (item.getItemId() == R.id.qlPopularSong) {
+                fragment = new fragment_popular_songs();
+            } else if (item.getItemId() == R.id.qlNewSong) {
+                fragment = new fragment_new_songs();
+            } else if (item.getItemId() == R.id.qlTheLoai) {
+                fragment = new Fragment_The_Loai();
+            } else if (item.getItemId() == R.id.qlBangXepHang) {
+                fragment = new BlankFragment3();
+            } else if (item.getItemId() == R.id.qlContact) {
+                fragment = new fragment_contact();
+            } else if (item.getItemId() == R.id.qlFeedback) {
+                fragment = new Fragment_nhan_feedback();
             }
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+            drawerLayout.closeDrawer(GravityCompat.START);
+            toolbar.setTitle(item.getTitle());
+            return false;
         });
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

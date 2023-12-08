@@ -19,7 +19,11 @@ public class Register extends AppCompatActivity {
     EditText user,email,pass;
     Button button,button01;
     MyPlayerDAO myPlayerDAO;
-
+    String text1 = getString( R.string.sign_up_successfully);
+    String text2 = getString(R.string.please_fill_out_all_the_form);
+    String text3 = getString(R.string.invalid_email);
+    String text4 = getString(R.string.email_has_already_been_use);
+    String text5 = getString(R.string.username_already_been_taken);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,24 +42,24 @@ public class Register extends AppCompatActivity {
                 String txtemail = email.getText().toString();
                 String txtpass = pass.getText().toString();
                 if (TextUtils.isEmpty(txtuser) || TextUtils.isEmpty(txtemail)|| TextUtils.isEmpty(txtpass)) {
-                    Toast.makeText(Register.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, text2, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (!isValidEmail(txtemail)) {
-                    Toast.makeText(Register.this, "Email không hợp lệ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, text3, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (myPlayerDAO.checkIfEmailExists(txtemail)) {
-                    Toast.makeText(Register.this, "Địa chỉ email đã được đăng ký", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, text4, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Login login = new Login(txtuser, txtemail, txtpass);
                 if (myPlayerDAO.addsig(login) > 0) {
-                    Toast.makeText(Register.this, "Đăng Ký Thành Công!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, text1, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Register.this, Log_in.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(Register.this, "Tên đăng nhập đã tồn tại", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, text5, Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -66,18 +70,13 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        button01.setOnClickListener(new View.OnClickListener() {
+        button01.setOnClickListener(v -> button01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                button01.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish(); // kết thúc activity hiện tại và trở về activity trước đó
-                        // Intent intent = new Intent(Dangky.this, Dangnhap.class);
-                        //  startActivity(intent);
-                    }
-                });
+                finish(); // kết thúc activity hiện tại và trở về activity trước đó
+                // Intent intent = new Intent(Dangky.this, Dangnhap.class);
+                //  startActivity(intent);
             }
-        });
+        }));
     }
 }

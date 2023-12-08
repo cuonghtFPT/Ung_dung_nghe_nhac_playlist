@@ -31,4 +31,17 @@
     <string name="meditate">Meditate</string>
     <string name="english">English</string>
     <string name="vietnamese">Vietnamese</string>
+    <string name="language">Language</string>
+    <string name="help">Help</string>
+    <string name="notification">Notification</string>
+    <string name="setting">Setting</string>
+    <string name="version">Version</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="libary">Library</string>
+    <string name="lofi">Lofi</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="email_has_already_been_use">Email Has Already Been Use</string>
+    <string name="sign_up_successfully">Sign Up Successfully</string>
+    <string name="username_already_been_taken">Username Has Already Been Taken</string>
+    <string name="please_fill_out_all_the_form">Please Fill Out The Missing Part</string>
 </resources>
