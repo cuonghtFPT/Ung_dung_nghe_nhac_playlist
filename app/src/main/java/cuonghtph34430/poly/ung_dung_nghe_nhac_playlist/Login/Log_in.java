@@ -2,10 +2,7 @@ package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Locale;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity.MainActivity;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.AdminDAO;
@@ -29,15 +25,6 @@ public class Log_in extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        String selectedLanguage = preferences.getString("language", "vi");
-
-        // Set the retrieved language as the app's locale
-        Locale locale = new Locale(selectedLanguage);
-        Locale.setDefault(locale);
-        Configuration config = getResources().getConfiguration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
         setContentView(R.layout.activity_log_in);
 
         AdminDAO adminDAO = new AdminDAO(this);

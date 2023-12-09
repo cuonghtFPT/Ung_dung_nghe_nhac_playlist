@@ -44,4 +44,5 @@
     <string name="sign_up_successfully">Đăng Ký Thành Công!</string>
     <string name="username_already_been_taken">Tên đăng nhập đã tồn tại</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 </resources>

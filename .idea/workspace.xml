@@ -5,6 +5,16 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_choi_nhac.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml">
         <config>
           <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
@@ -37,42 +47,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec0e87ba-7947-49ad-b70a-a40e25092394" name="Changes" comment="h">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/SplashScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/enter_from_left.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/enter_from_right.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_left.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_right.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/tz4ef2rj0h.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Adapter/GenreAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Adapter/GenreAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Choinhac.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/Choinhac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/LichSuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/LichSuDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/NhanFeedbackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/NhanFeedbackDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/TheLoaiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/TheLoaiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/BlankFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/BlankFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/BlankFragment3.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/BlankFragment3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/BlankFragment4.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/BlankFragment4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_All_song.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_All_song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_The_Loai.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_The_Loai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_featured_songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_featured_songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_home.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/MyMediaPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/fragment_new_songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/fragment_new_songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/fragment_popular_songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/fragment_popular_songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/SplashScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Log_in.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Log_in.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_choi_nhac.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_choi_nhac.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_left.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_left.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_right.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/anim/exit_to_right.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,16 +186,20 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "Dangchph",
-    "last_opened_file_path": "D:/Ung_dung_nghe_nhac_playlist/app/src/main/res/anim"
+    "last_opened_file_path": "D:/Example/Ung_dung_nghe_nhac_playlist"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\anim" />
+      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\raw" />
       <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\drawable" />
+      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\anim" />
     </key>
     <key name="android.template.1753921026">
       <recent name="cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\transition" />
     </key>
   </component>
   <component name="RunManager">
@@ -293,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702042454606</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="h">
+      <option name="closed" value="true" />
+      <created>1702115594053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702115594053</updated>
+    </task>
+    <task id="LOCAL-00003" summary="h">
+      <option name="closed" value="true" />
+      <created>1702115603949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702115603949</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

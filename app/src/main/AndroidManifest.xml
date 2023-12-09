@@ -19,7 +19,7 @@
         android:theme="@style/Theme.Ung_dung_nghe_nhac_playlist"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.SplashScreen"
+            android:name=".Login.Log_in"
             android:exported="false" />
         <activity
             android:name=".Activity.Choinhac"
@@ -34,7 +34,7 @@
             android:name=".Fragment.fragment_contact"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".Login.Log_in"
+            android:name=".Activity.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
