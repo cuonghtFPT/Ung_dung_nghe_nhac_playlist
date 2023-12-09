@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment1"
     tools:context="cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment$BlankFragment">
     <LinearLayout
         android:layout_width="match_parent"

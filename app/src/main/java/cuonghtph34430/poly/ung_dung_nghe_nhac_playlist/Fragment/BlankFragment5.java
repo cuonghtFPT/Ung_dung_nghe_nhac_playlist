@@ -45,7 +45,7 @@ public class BlankFragment5 extends Fragment implements AlbumListAdapter.OnAlbum
         fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment_all_song);
+        transaction.replace(R.id.frameLayout, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }

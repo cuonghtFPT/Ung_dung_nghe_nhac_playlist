@@ -1,5 +1,7 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,6 +26,7 @@ public class Fragment_person extends Fragment {
         ImageView btnSetting = view.findViewById(R.id.btnSetting);
         ImageView btnExit = view.findViewById(R.id.btnExit);
         ImageView btnTrogiup = view.findViewById(R.id.btnTrogiup);
+        ImageView btnVersion = view.findViewById(R.id.btnVersion);
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,12 +40,43 @@ public class Fragment_person extends Fragment {
                 Fragment fragmentB = new Fragment_Cai_Dat();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.fragment_person, fragmentB);
+                transaction.replace(R.id.frameLayout, fragmentB);
                 transaction.addToBackStack(null); // Optional: Adds the transaction to the back stack
                 transaction.commit();
             }
         });
+        btnTrogiup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragmentB = new Fragment_Help();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.frameLayout, fragmentB);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+        btnVersion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogVersion();
+            }
+        });
 
         return view;
+    }
+    public void DialogVersion(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Phiên Bản Cúa Ứng Dụng");
+        builder.setMessage("Phiên bản" );
+        builder.setCancelable(false);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                alertDialog.cancel();
+            }
+        });
+        alertDialog.show();
     }
 }

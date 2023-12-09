@@ -77,17 +77,20 @@ public class BaiHatDAO {
     private List<BaiHat> getData(String sql,String...selectionArgs){
         List<BaiHat> list = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery(sql,selectionArgs);
-        while (cursor.moveToNext()){
-            BaiHat baiHat = new BaiHat();
-            baiHat.IdBaiHat = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdBaiHat")));
-            baiHat.TenBaiHat = cursor.getString(cursor.getColumnIndexOrThrow("TenBaiHat"));
-            baiHat.AnhBaiHat = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("AnhBaiHat")));
-            baiHat.DuongDan = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("DuongDan")));
-            baiHat.IdAlbum = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdAlbum")));
-            baiHat.IdCaSi = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdCaSi")));
-            baiHat.IdTheLoai = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdTheLoai")));
-            baiHat.LuotNghe = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("LuotNghe")));
-            list.add(baiHat);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                BaiHat baiHat = new BaiHat();
+                baiHat.IdBaiHat = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdBaiHat")));
+                baiHat.TenBaiHat = cursor.getString(cursor.getColumnIndexOrThrow("TenBaiHat"));
+                baiHat.AnhBaiHat = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("AnhBaiHat")));
+                baiHat.DuongDan = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("DuongDan")));
+                baiHat.IdAlbum = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdAlbum")));
+                baiHat.IdCaSi = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdCaSi")));
+                baiHat.IdTheLoai = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdTheLoai")));
+                baiHat.LuotNghe = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("LuotNghe")));
+                list.add(baiHat);
+            }while (cursor.moveToNext());
+            cursor.close();
         }
         return list;
     }

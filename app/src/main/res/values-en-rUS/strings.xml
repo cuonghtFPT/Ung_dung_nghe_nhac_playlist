@@ -44,4 +44,5 @@
     <string name="sign_up_successfully">Sign Up Successfully</string>
     <string name="username_already_been_taken">Username Has Already Been Taken</string>
     <string name="please_fill_out_all_the_form">Please Fill Out The Missing Part</string>
+    <string name="frequently_asked_question">Frequently Asked Question</string>
 </resources>

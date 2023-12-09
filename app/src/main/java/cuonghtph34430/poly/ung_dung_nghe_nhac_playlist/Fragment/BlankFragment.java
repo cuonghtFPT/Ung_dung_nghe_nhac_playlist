@@ -81,7 +81,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
                 Fragment fragmentB = new BlankFragment5();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.fragment1, fragmentB);
+                transaction.replace(R.id.frameLayout, fragmentB);
                 transaction.addToBackStack(null); // Optional: Adds the transaction to the back stack
                 transaction.commit();
             }
@@ -92,7 +92,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
                 Fragment fragmentB = new BlankFragment4();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.fragment1, fragmentB);
+                transaction.replace(R.id.frameLayout, fragmentB);
                 transaction.addToBackStack(null); // Optional: Adds the transaction to the back stack
                 transaction.commit();
             }
@@ -175,7 +175,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
         fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment_all_song);
+        transaction.replace(R.id.frameLayout, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -190,7 +190,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
         fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment_all_song);
+        transaction.replace(R.id.frameLayout, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }

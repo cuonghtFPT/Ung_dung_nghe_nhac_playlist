@@ -55,11 +55,14 @@ public class TheLoaiDAO {
     private List<TheLoai> getTheLoai(String sql,String...selectionArgs){
         List<TheLoai> list = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery(sql,selectionArgs);
-        while (cursor.moveToNext()){
-            TheLoai theLoai = new TheLoai();
-            theLoai.IdTheLoai = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdTheLoai")));
-            theLoai.TenTheLoai = cursor.getString(cursor.getColumnIndexOrThrow("TenTheLoai"));
-            list.add(theLoai);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                TheLoai theLoai = new TheLoai();
+                theLoai.IdTheLoai = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdTheLoai")));
+                theLoai.TenTheLoai = cursor.getString(cursor.getColumnIndexOrThrow("TenTheLoai"));
+                list.add(theLoai);
+            } while (cursor.moveToNext());
+            cursor.close();
         }
         return list;
     }

@@ -43,6 +43,7 @@
     <string name="email_has_already_been_use">Địa chỉ email đã được đăng ký</string>
     <string name="sign_up_successfully">Đăng Ký Thành Công!</string>
     <string name="username_already_been_taken">Tên đăng nhập đã tồn tại</string>
+    <string name="frequently_asked_question">Câu Hỏi Thường Gặp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 </resources>

@@ -25,7 +25,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         String selectedLanguage = preferences.getString("language", "vi");
-
         // Set the retrieved language as the app's locale
         Locale locale = new Locale(selectedLanguage);
         Locale.setDefault(locale);

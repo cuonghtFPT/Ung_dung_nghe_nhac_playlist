@@ -1,7 +1,6 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model;
 
 public class Login {
-
     private String tendangnhap;
     private String username;
     private String password;
