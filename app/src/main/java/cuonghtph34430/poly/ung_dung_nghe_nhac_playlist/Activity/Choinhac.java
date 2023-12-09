@@ -1,4 +1,4 @@
-package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist;
+package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +24,7 @@ import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.LichSuDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.CaSi;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.LichSu;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class Choinhac extends AppCompatActivity {
     BaiHatDAO baiHatDAO;

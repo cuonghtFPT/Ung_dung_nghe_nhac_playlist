@@ -23,13 +23,13 @@ public class LichSuDAO {
         ContentValues values = new ContentValues();
         values.put("IdBaiHat", lichSu.getIdBaiHat());
         values.put("IdCaSi",lichSu.getIdCaSi());
-        values.put("ThoiGian", lichSu.getThoiGianNghe()); // Storing as string
+        values.put("ThoiGian", lichSu.getThoiGianNghe());
 
         long newRowId = db.insert("LichSuNghe", null, values);
         if (newRowId != -1) {
-            // Successful insertion
+            // Thông báo thành công
         } else {
-            // Failed insertion
+            // Thông báo thất bại
         }
     }
     public List<LichSu> getLichSuData() {

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Database.DBhelper;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.TheLoai;
 
 public class TheLoaiDAO {

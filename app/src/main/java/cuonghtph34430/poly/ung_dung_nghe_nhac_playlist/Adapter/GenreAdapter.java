@@ -1,6 +1,5 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -15,7 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Choinhac;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity.Choinhac;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
