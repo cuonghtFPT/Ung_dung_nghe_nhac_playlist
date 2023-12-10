@@ -1,10 +1,8 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO;
 
-import static android.content.Context.MODE_PRIVATE;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 

@@ -27,12 +27,9 @@ public class Fragment_person extends Fragment {
         ImageView btnExit = view.findViewById(R.id.btnExit);
         ImageView btnTrogiup = view.findViewById(R.id.btnTrogiup);
         ImageView btnVersion = view.findViewById(R.id.btnVersion);
-        btnExit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), NguoiDung.class);
-                startActivity(intent);
-            }
+        btnExit.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), NguoiDung.class);
+            startActivity(intent);
         });
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
