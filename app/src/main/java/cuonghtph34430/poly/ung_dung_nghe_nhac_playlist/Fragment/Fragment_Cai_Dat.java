@@ -7,6 +7,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -22,11 +25,13 @@ public class Fragment_Cai_Dat extends Fragment {
     Spinner spinner;
     ArrayAdapter<String> adapter;
     public boolean isSpinnerInitialized = false;
+    TextView btnHelp;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment__cai_d_a_t, container, false);
+        btnHelp = view.findViewById(R.id.btnHelp);
         String[] list = new String[]{"",getString(R.string.english),getString(R.string.vietnamese)};
         spinner = view.findViewById(R.id.language);
         adapter = new ArrayAdapter<>(requireContext(),android.R.layout.simple_spinner_item, list);
@@ -49,8 +54,10 @@ public class Fragment_Cai_Dat extends Fragment {
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
+
         return view ;
 
     }

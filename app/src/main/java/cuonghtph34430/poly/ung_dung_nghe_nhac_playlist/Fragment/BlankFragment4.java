@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ArtistListAdapter;
@@ -43,7 +42,7 @@ public class BlankFragment4 extends Fragment implements ArtistListAdapter.OnArti
         fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment_all_song);
+        transaction.replace(R.id.frameLayout, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }

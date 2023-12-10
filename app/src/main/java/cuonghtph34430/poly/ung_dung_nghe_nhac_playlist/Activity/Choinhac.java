@@ -1,8 +1,10 @@
-package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist;
+package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,6 +26,7 @@ import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.LichSuDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.CaSi;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.LichSu;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class Choinhac extends AppCompatActivity {
     BaiHatDAO baiHatDAO;
@@ -43,6 +46,7 @@ public class Choinhac extends AppCompatActivity {
     LichSuDAO lichSuDAO;
     LichSu lichSu;
     Date currentTime;
+    String username = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,6 +123,9 @@ public class Choinhac extends AppCompatActivity {
 
             lichSuDAO = new LichSuDAO(getApplicationContext());
             lichSu = new LichSu();
+            SharedPreferences preferences = getApplicationContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+            String username = preferences.getString("USERNAME", "defaultUsername");
+            lichSu.setTenDangKy(username);
             lichSu.setIdBaiHat(selectedSong.getIdBaiHat());
             currentTime = Calendar.getInstance().getTime();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -283,6 +290,9 @@ public class Choinhac extends AppCompatActivity {
 
                 lichSuDAO = new LichSuDAO(getApplicationContext());
                 lichSu = new LichSu();
+                SharedPreferences preferences = getApplicationContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                String username = preferences.getString("USERNAME", "defaultUsername");
+                lichSu.setTenDangKy(username);
                 lichSu.setIdBaiHat(selectedSong.getIdBaiHat());
                 currentTime = Calendar.getInstance().getTime();
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");

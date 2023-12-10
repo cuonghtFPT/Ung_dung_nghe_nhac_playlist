@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Database.DBhelper;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.TheLoai;
 
 public class TheLoaiDAO {
@@ -56,11 +55,14 @@ public class TheLoaiDAO {
     private List<TheLoai> getTheLoai(String sql,String...selectionArgs){
         List<TheLoai> list = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery(sql,selectionArgs);
-        while (cursor.moveToNext()){
-            TheLoai theLoai = new TheLoai();
-            theLoai.IdTheLoai = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdTheLoai")));
-            theLoai.TenTheLoai = cursor.getString(cursor.getColumnIndexOrThrow("TenTheLoai"));
-            list.add(theLoai);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                TheLoai theLoai = new TheLoai();
+                theLoai.IdTheLoai = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdTheLoai")));
+                theLoai.TenTheLoai = cursor.getString(cursor.getColumnIndexOrThrow("TenTheLoai"));
+                list.add(theLoai);
+            } while (cursor.moveToNext());
+            cursor.close();
         }
         return list;
     }

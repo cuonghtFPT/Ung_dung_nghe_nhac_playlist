@@ -5,7 +5,47 @@
       <config />
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_choi_nhac.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_log_in.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/contact.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__cai_d_a_t.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__help.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment__lich__su.xml">
         <config>
           <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
         </config>
@@ -15,12 +55,67 @@
           <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_all_song.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank2.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank3.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank4.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank5.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_feauted_song.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_feedback.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_nhan_feedback.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_person.xml">
         <config>
           <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_popular_song.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/frament_new_song.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_album.xml">
         <config>
           <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
         </config>
@@ -32,33 +127,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec0e87ba-7947-49ad-b70a-a40e25092394" name="Changes" comment="h">
-      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/anh_12.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/Choinhac.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/Choinhac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/AdminDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/CaSiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/CaSiDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/LichSuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/LichSuDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/MyPlayerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/NguoiDungDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Database/DBhelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Database/DBhelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_featured_songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_featured_songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/fragment_new_songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/fragment_new_songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_Lich_Su.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_Lich_Su.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_person.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Log_in.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Log_in.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment__cai_d_a_t.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment__cai_d_a_t.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment__the__loai.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment__the__loai.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_person.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/LichSu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/LichSu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/NguoiDung.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +201,53 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="Danganh6333" />
+        <option name="repository" value="Ung_dung_nghe_nhac_playlist" />
+      </RepoCoordinatesHolder>
+    </option>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7132db36-a6aa-47e1-a161-a22bfefc4d53" />
+        <option name="url" value="https://github.com/Danganh6333/Ung_dung_nghe_nhac_playlist.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -132,21 +261,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dangchph&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ung_dung_nghe_nhac_playlist&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "PROJECT_TRUSTED_KEY": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "android-custom-viewD:/Android/Sdk/sources/android-33/android/view/View.java_SELECTED": "View",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Dangchph",
+    "last_opened_file_path": "D:/Ung_dung_nghe_nhac_playlist"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\raw" />
       <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\drawable" />
+      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\anim" />
+    </key>
+    <key name="android.template.1753921026">
+      <recent name="cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\transition" />
     </key>
   </component>
   <component name="RunManager">
@@ -227,6 +366,39 @@
       <option name="presentableId" value="Default" />
       <updated>1701788382977</updated>
     </task>
+    <task id="LOCAL-00001" summary="h">
+      <option name="closed" value="true" />
+      <created>1702042454606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702042454606</updated>
+    </task>
+    <task id="LOCAL-00002" summary="h">
+      <option name="closed" value="true" />
+      <created>1702115594053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702115594053</updated>
+    </task>
+    <task id="LOCAL-00003" summary="h">
+      <option name="closed" value="true" />
+      <created>1702115603949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702115603949</updated>
+    </task>
+    <task id="LOCAL-00004" summary="h">
+      <option name="closed" value="true" />
+      <created>1702144541193</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702144541193</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

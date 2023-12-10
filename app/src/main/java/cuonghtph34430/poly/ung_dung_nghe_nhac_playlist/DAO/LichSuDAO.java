@@ -23,14 +23,55 @@ public class LichSuDAO {
         ContentValues values = new ContentValues();
         values.put("IdBaiHat", lichSu.getIdBaiHat());
         values.put("IdCaSi",lichSu.getIdCaSi());
-        values.put("ThoiGian", lichSu.getThoiGianNghe()); // Storing as string
-
+        values.put("ThoiGian", lichSu.getThoiGianNghe());
+        values.put("TenDangKy", lichSu.getTenDangKy());
         long newRowId = db.insert("LichSuNghe", null, values);
         if (newRowId != -1) {
-            // Successful insertion
+            // Thông báo thành công
         } else {
-            // Failed insertion
+            // Thông báo thất bại
         }
+    }
+    public List<LichSu> getLichSuDataByUser(String username) {
+        List<LichSu> lichSuList = new ArrayList<>();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        String[] projection = {
+                "IdLichSu",
+                "IdBaiHat",
+                "IdCaSi",
+                "ThoiGian",
+                "TenDangKy"
+        };
+
+        String selection = "TenDangKy = ?";
+        String[] selectionArgs = { username };
+
+        Cursor cursor = db.query(
+                "LichSuNghe",
+                projection,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                LichSu lichSu = new LichSu();
+                lichSu.IdLichSu = cursor.getInt(cursor.getColumnIndexOrThrow("IdLichSu"));
+                lichSu.IdBaiHat = cursor.getInt(cursor.getColumnIndexOrThrow("IdBaiHat"));
+                lichSu.IdCaSi = cursor.getInt(cursor.getColumnIndexOrThrow("IdCaSi"));
+                lichSu.ThoiGianNghe = cursor.getString(cursor.getColumnIndexOrThrow("ThoiGian"));
+                lichSu.TenDangKy = cursor.getString(cursor.getColumnIndexOrThrow("TenDangKy"));
+                lichSuList.add(lichSu);
+            } while (cursor.moveToNext());
+
+            cursor.close();
+        }
+
+        return lichSuList;
     }
     public List<LichSu> getLichSuData() {
         List<LichSu> lichSuList = new ArrayList<>();

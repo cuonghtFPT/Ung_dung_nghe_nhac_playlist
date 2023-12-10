@@ -1,4 +1,4 @@
-package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Login;
+package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -8,8 +8,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -20,7 +20,6 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
 
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Choinhac;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.BlankFragment;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.BlankFragment2;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment.BlankFragment3;
@@ -108,7 +107,14 @@ public class MainActivity extends AppCompatActivity implements BlankFragment2.On
                 }else {
                     fragment = new Fragment_person();
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, fragment).commit();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.setCustomAnimations(
+                        R.anim.enter_from_right,
+                        R.anim.exit_to_left,
+                        R.anim.enter_from_left,
+                        R.anim.exit_to_right
+                );
+                transaction.replace(R.id.frameLayout, fragment).commit();
                 return true;
             }
         });

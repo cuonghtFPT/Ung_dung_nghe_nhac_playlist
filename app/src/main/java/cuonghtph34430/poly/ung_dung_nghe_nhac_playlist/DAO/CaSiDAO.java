@@ -58,12 +58,15 @@ public class CaSiDAO {
     public List<CaSi> getArtist(String sql,String...selectionArgs){
         List<CaSi> list = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.rawQuery(sql,selectionArgs);
-        while (cursor.moveToNext()){
-            CaSi caSi = new CaSi();
-            caSi.IdCaSi = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdCaSi")));
-            caSi.TenCaSi = cursor.getString(cursor.getColumnIndexOrThrow("TenCaSi"));
-            caSi.AnhCaSi = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("AnhCaSi")));
-            list.add(caSi);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                CaSi caSi = new CaSi();
+                caSi.IdCaSi = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("IdCaSi")));
+                caSi.TenCaSi = cursor.getString(cursor.getColumnIndexOrThrow("TenCaSi"));
+                caSi.AnhCaSi = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("AnhCaSi")));
+                list.add(caSi);
+            }while (cursor.moveToNext());
+            cursor.close();
         }
         return list;
     }

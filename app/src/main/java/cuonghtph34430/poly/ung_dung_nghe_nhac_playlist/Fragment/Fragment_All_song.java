@@ -14,12 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ListSongAdapter;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Choinhac;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity.Choinhac;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.BaiHatDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;

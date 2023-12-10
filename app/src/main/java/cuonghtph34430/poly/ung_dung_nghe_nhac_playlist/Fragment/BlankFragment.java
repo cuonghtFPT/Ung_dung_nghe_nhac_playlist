@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainer;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,7 +27,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -36,13 +34,11 @@ import java.util.TimerTask;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.AlbumAdapter;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ArtistAdapter;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.ListSongAdapter;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Adapter.MusicListAdapter;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Choinhac;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Activity.Choinhac;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.AlbumDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.BaiHatDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.DAO.CaSiDAO;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.Album;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.AudioModel;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.BaiHat;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.CaSi;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
@@ -85,7 +81,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
                 Fragment fragmentB = new BlankFragment5();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.fragment1, fragmentB);
+                transaction.replace(R.id.frameLayout, fragmentB);
                 transaction.addToBackStack(null); // Optional: Adds the transaction to the back stack
                 transaction.commit();
             }
@@ -96,7 +92,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
                 Fragment fragmentB = new BlankFragment4();
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.fragment1, fragmentB);
+                transaction.replace(R.id.frameLayout, fragmentB);
                 transaction.addToBackStack(null); // Optional: Adds the transaction to the back stack
                 transaction.commit();
             }
@@ -179,7 +175,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
         fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment_all_song);
+        transaction.replace(R.id.frameLayout, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -194,7 +190,7 @@ public class BlankFragment extends Fragment implements ArtistAdapter.OnArtistGli
         fragment_all_song.setArguments(args);
 
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment1, fragment_all_song);
+        transaction.replace(R.id.frameLayout, fragment_all_song);
         transaction.addToBackStack(null);
         transaction.commit();
     }
