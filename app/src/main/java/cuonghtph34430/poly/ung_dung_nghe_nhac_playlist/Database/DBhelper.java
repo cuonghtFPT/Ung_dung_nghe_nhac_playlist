@@ -27,14 +27,14 @@ public class DBhelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         LuuAnh();
         LuuNhac();
-        String createTABLEsig = "CREATE TABLE sig(TENDANGKY TEXT PRIMARY KEY ," +
-                "USERNAME TEXT," +
-                "PASSWORD TEXT)";
-        db.execSQL(createTABLEsig);
-
-        String dbAdmin = "CREATE TABLE ADMIN(maadmin text primary key, hoten text, matkhau text)";
-        db.execSQL(dbAdmin);
-        db.execSQL("INSERT INTO ADMIN VALUES('admin','admin','abc123')");
+        String createTableNguoiDung = "CREATE TABLE NguoiDung(TenDangKy TEXT PRIMARY KEY," +
+                "TenNguoiDung TEXT," +
+                "MatKhau TEXT)";
+        db.execSQL(createTableNguoiDung);
+        String insertTableNguoiDung = "INSERT INTO NguoiDung(TenDangKy,TenNguoiDung,MatKhau)" +
+                " VALUES('User1','Nam@gmail.com','Abc123')," +
+                "('User3','Phuong@gmail.com','Abc234')";
+        db.execSQL(insertTableNguoiDung);
 
         String dbNhanFeedback = "CREATE TABLE NHANFEEDBACK(mafeedback integer primary key," +
                 "fullname TEXT," +
@@ -108,6 +108,8 @@ public class DBhelper extends SQLiteOpenHelper {
                 "            IdBaiHat INTEGER,\n" +
                 "            IdCaSi INTEGER,\n" +
                 "            ThoiGian TEXT,\n" +
+                "            TenDangKy TEXT NOT NULL,\n" +
+                "            FOREIGN KEY (TenDangKy) REFERENCES NguoiDung(TenDangKy),\n" +
                 "            FOREIGN KEY (IdBaiHat) REFERENCES BaiHat(IdBaiHat),\n" +
                 "            FOREIGN KEY (IdCaSi) REFERENCES CaSi(IdCaSi)\n" +
                 "            )";

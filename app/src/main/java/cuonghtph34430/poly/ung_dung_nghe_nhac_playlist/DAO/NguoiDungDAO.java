@@ -9,31 +9,27 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Database.DBhelper;
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.Login;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.NguoiDung;
 
-public class MyPlayerDAO {
-
-    private final DBhelper dBhelper;
-    SharedPreferences sharedPreferences;
-    public MyPlayerDAO(Context context) {
+public class NguoiDungDAO {
+    private DBhelper dBhelper;
+    private SQLiteDatabase db;
+    public NguoiDungDAO(Context context) {
         dBhelper = new DBhelper(context);
-        sharedPreferences =context.getSharedPreferences("THONGTINADMIN",MODE_PRIVATE);
     }
 
-    public long addsig(Login login){
+    public long ThemNguoiDung(NguoiDung nguoiDung){
         SQLiteDatabase database=dBhelper.getWritableDatabase();
         ContentValues values=new ContentValues();
-        values.put("TENDANGKY",login.getTendangnhap());
-        values.put("USERNAME",login.getUsername());
-        values.put("PASSWORD",login.getPassword());
-        return database.insert("sig",null,values);
+        values.put("TenDangKy", nguoiDung.TenDangKy);
+        values.put("TenNguoiDung", nguoiDung.TenNguoiDung);
+        values.put("MatKhau", nguoiDung.MatKhau);
+        return database.insert("NguoiDung",null,values);
     }
-
     public boolean checklogin(String username, String password) {
-        SQLiteDatabase database = dBhelper.getReadableDatabase();
-        String sql = "SELECT * FROM sig WHERE USERNAME = ? AND PASSWORD = ?";
-        Cursor cursor = database.rawQuery(sql, new String[]{username, password});
-
+        db = dBhelper.getReadableDatabase();
+        String sql = "SELECT * FROM NguoiDung WHERE TenDangKy = ? AND MatKhau = ?";
+        Cursor cursor = db.rawQuery(sql, new String[]{username, password});
         // Check if the cursor has any results
         boolean hasResult = cursor.moveToFirst();
 
@@ -44,8 +40,8 @@ public class MyPlayerDAO {
     }
     public boolean checkIfEmailExists(String email) {
         // đọc dữ liệu
-        SQLiteDatabase db = this.dBhelper.getReadableDatabase();
-        String query = "SELECT * FROM sig" + " WHERE USERNAME = ?";
+        db = this.dBhelper.getReadableDatabase();
+        String query = "SELECT * FROM NguoiDung" + " WHERE TenNguoiDung = ?";
         // Thực thi câu truy vấn và trả về đối tượng Cursor
         Cursor cursor = db.rawQuery(query, new String[]{email});
         // Kiểm tra xem có ít nhất một dòng được trả về từ cơ sở dữ liệu hay không

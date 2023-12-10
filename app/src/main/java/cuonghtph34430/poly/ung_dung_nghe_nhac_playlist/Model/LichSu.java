@@ -5,17 +5,18 @@ public class LichSu {
     public int IdBaiHat;
     public int IdCaSi;
     public String ThoiGianNghe;
+    public String TenDangKy;
+
 
     public LichSu() {
     }
-
-    public LichSu(int idLichSu, int idBaiHat, int idCaSi, String thoiGianNghe) {
+    public LichSu(int idLichSu, int idBaiHat, int idCaSi, String thoiGianNghe, String tenDangKy) {
         IdLichSu = idLichSu;
         IdBaiHat = idBaiHat;
         IdCaSi = idCaSi;
         ThoiGianNghe = thoiGianNghe;
+        TenDangKy = tenDangKy;
     }
-
     public int getIdLichSu() {
         return IdLichSu;
     }
@@ -47,4 +48,12 @@ public class LichSu {
     public void setThoiGianNghe(String thoiGianNghe) {
         ThoiGianNghe = thoiGianNghe;
     }
+    public String getTenDangKy() {
+        return TenDangKy;
+    }
+
+    public void setTenDangKy(String tenDangKy) {
+        TenDangKy = tenDangKy;
+    }
+
 }

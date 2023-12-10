@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.Login;
+import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Model.NguoiDung;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class Fragment_person extends Fragment {
@@ -30,7 +30,7 @@ public class Fragment_person extends Fragment {
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), Login.class);
+                Intent intent = new Intent(getContext(), NguoiDung.class);
                 startActivity(intent);
             }
         });
@@ -69,7 +69,7 @@ public class Fragment_person extends Fragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setTitle("Phiên Bản Cúa Ứng Dụng");
         builder.setMessage("Phiên bản" );
-        builder.setCancelable(false);
+        builder.setCancelable(true);
         AlertDialog alertDialog = builder.create();
         alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override

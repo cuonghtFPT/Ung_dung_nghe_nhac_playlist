@@ -1,5 +1,7 @@
 package cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -21,13 +23,16 @@ public class Fragment_Lich_Su extends Fragment {
     HistoryAdapter historyAdapter;
     List<LichSu> lichSus;
     LichSuDAO lichSuDAO;
+    String username;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment__lich__su, container, false);
         ListView lv_history = view.findViewById(R.id.lv_history);
         lichSuDAO = new LichSuDAO(getContext());
-        lichSus = lichSuDAO.getLichSuData();
+        SharedPreferences preferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        username = preferences.getString("USERNAME", "defaultUsername");
+        lichSus = lichSuDAO.getLichSuDataByUser(username);
         historyAdapter = new HistoryAdapter(lichSus,getContext());
         lv_history.setAdapter(historyAdapter);
         historyAdapter.notifyDataSetChanged();
