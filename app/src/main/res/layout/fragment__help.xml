@@ -27,11 +27,10 @@
                 android:id="@+id/heading_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="heading_1"
-                android:textSize="20sp"
+                android:text="@string/question_4"
+                android:textSize="16sp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:textAllCaps="true"
                 android:textStyle="bold"/>
             <ImageView
                 android:id="@+id/arrow_1"
@@ -46,7 +45,7 @@
                 android:padding="7dp"
                 android:visibility="gone"
                 android:layout_below="@id/heading_1"
-                android:text="content_1"
+                android:text="@string/answer_4"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -54,16 +53,17 @@
             android:layout_height="wrap_content"
             android:id="@+id/question_2"
             android:padding="11dp">
+
             <TextView
                 android:id="@+id/heading_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="heading_2"
-                android:textSize="20sp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
+                android:text="@string/question_2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/arrow_2"
                 android:layout_width="34dp"
@@ -77,7 +77,7 @@
                 android:padding="7dp"
                 android:visibility="gone"
                 android:layout_below="@id/heading_2"
-                android:text="content_2"
+                android:text="@string/answer_2"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -87,13 +87,12 @@
             android:id="@+id/question_3">
             <TextView
                 android:id="@+id/heading_3"
-                android:layout_width="wrap_content"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="heading_3"
-                android:textSize="20sp"
+                android:text="@string/question_3"
+                android:textSize="16sp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:textAllCaps="true"
                 android:textStyle="bold"/>
             <ImageView
                 android:id="@+id/arrow_3"
@@ -108,7 +107,7 @@
                 android:padding="7dp"
                 android:visibility="gone"
                 android:layout_below="@id/heading_3"
-                android:text="content_3"
+                android:text="@string/answer_3"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -120,11 +119,10 @@
                 android:id="@+id/heading_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="heading_4"
-                android:textSize="20sp"
+                android:text="@string/question_1"
+                android:textSize="16sp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:textAllCaps="true"
                 android:textStyle="bold"/>
             <ImageView
                 android:id="@+id/arrow_4"
@@ -139,38 +137,7 @@
                 android:padding="7dp"
                 android:visibility="gone"
                 android:layout_below="@id/heading_4"
-                android:text="content_4"
-                />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question_5"
-            android:padding="11dp">
-            <TextView
-                android:id="@+id/heading_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="heading_5"
-                android:textSize="20sp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
-            <ImageView
-                android:id="@+id/arrow_5"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:src="@drawable/baseline_keyboard_arrow_down_24"
-                android:layout_alignParentEnd="true"/>
-            <TextView
-                android:id="@+id/content_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="7dp"
-                android:visibility="gone"
-                android:layout_below="@id/heading_5"
-                android:text="content_5"
+                android:text="@string/answer_1"
                 />
         </RelativeLayout>
     </LinearLayout>

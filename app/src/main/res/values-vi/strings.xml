@@ -25,6 +25,11 @@
     <string name="fail_message">User và pass không đúng.Đăng nhập thất bại</string>
     <string name="history">Lịch Sử</string>
     <string name="Genre">Thể loại</string>
+    <string name="question_1">Liệu Ứng dụng có hỗ trợ đa ngôn ngữ ?</string>
+    <string name="question_2">Cách báo cáo một vấn đề cho nhà phát triển</string>
+    <string name="question_3">Cách để nghe những cập nhật mới nhất về Ứng Dụng</string>
+    <string name="question_4">Ứng Dụng MyPlayer là gì?</string>
+    <string name="answer_3">Bạn có thể vào thanh menu bên trái rồi vào Liên Hệ rồi chọn phương thức liên lạc mà bạn muốn(Zalo,Facebook,Gmail,Phone) để có thể nhận những thông báo mới nhất của chúng tôi</string>
     <string name="Chart">Bảng Xếp hạng</string>
     <string name="romance">Tình Cảm</string>
     <string name="dance">Nhảy</string>
@@ -45,4 +50,7 @@
     <string name="username_already_been_taken">Tên đăng nhập đã tồn tại</string>
     <string name="please_fill_out_all_the_form">Vui lòng điền đầy đủ thông tin</string>
     <string name="frequently_asked_question">Câu Hỏi Thường Gặp</string>
+    <string name="answer_1">Chúng tôi hiện chỉ có hỗ trợ hai ngôn ngữ chính bao gồm Tiếng Việt                 và Tiếng Anh.Bạn có thể thay đổi cài đặt ngôn ngữ bắng cách vào Cá Nhân >                 Cài Đặt > Ngôn Ngữ rồi lựa chọn ngôn ngữ mà bạn muốn đổi</string>
+    <string name="answer_2">Bạn có thể vào thanh bên cạnh rồi chọn Phản Hồi rồi bạn có thể báo                 cáo cho chúng tôi những vấn đề mà bạn đang vướng phải khi dùng ứng dụng bằng cách                 nhấn nút + ở góc phải dưới màn hình</string>
+    <string name="answer_4">MyPlayer là ứng dụng được phát triển nhằm phục mục đích nghe nhạc</string>
 </resources>

@@ -120,6 +120,16 @@
           <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_tab_navigation.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml">
+        <config>
+          <theme>@style/Theme.Ung_dung_nghe_nhac_playlist</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
@@ -136,18 +146,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/Choinhac.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Activity/Choinhac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/AdminDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/CaSiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/CaSiDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/LichSuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/LichSuDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/MyPlayerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/DAO/NguoiDungDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Database/DBhelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Database/DBhelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_Lich_Su.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_Lich_Su.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_person.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Adapter/ChartAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Adapter/ChartAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Adapter/MyMediaPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Fragment/Fragment_Help.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Log_in.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Log_in.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Login/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/LichSu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/LichSu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cuonghtph34430/poly/ung_dung_nghe_nhac_playlist/Model/NguoiDung.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment__help.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment__help.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,20 +267,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "PROJECT_TRUSTED_KEY": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "android-custom-viewD:/Android/Sdk/sources/android-33/android/view/View.java_SELECTED": "View",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Dangchph",
-    "last_opened_file_path": "D:/Ung_dung_nghe_nhac_playlist"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;PROJECT_TRUSTED_KEY&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;android-custom-viewD:/Android/Sdk/sources/android-33/android/view/View.java_SELECTED&quot;: &quot;View&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dangchph&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Ung_dung_nghe_nhac_playlist&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Ung_dung_nghe_nhac_playlist\app\src\main\res\raw" />
@@ -398,7 +404,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702144541193</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="h">
+      <option name="closed" value="true" />
+      <created>1702195837070</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702195837070</updated>
+    </task>
+    <task id="LOCAL-00006" summary="h">
+      <option name="closed" value="true" />
+      <created>1702195938147</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702195938147</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

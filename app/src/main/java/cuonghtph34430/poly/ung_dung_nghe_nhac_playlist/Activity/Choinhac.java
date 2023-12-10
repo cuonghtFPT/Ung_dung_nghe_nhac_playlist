@@ -66,7 +66,6 @@ public class Choinhac extends AppCompatActivity {
         // Khởi tạo songList nếu chưa được khởi tạo
         if (songList == null) {
             songList = baiHatDAO.getAll();
-            Log.e("Gyaaaaatttt",String.valueOf(songList.size()));
         }
         imgLui.setOnClickListener(v -> {
             if (musicPlayer != null && !songList.isEmpty()) {

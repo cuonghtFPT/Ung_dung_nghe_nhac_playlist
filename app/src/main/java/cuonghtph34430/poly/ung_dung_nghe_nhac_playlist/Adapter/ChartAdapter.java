@@ -51,12 +51,16 @@ public class ChartAdapter extends BaseAdapter {
         TextView textTitle = view.findViewById(R.id.textTitle);
         TextView numberingchart = view.findViewById(R.id.numberingchart);
         TextView textArtist = view.findViewById(R.id.textArtist);
+
         CaSiDAO caSiDAO = new CaSiDAO(context);
         CaSi caSi = caSiDAO.getID(String.valueOf(baiHats.get(position).getIdCaSi()));
+
         textArtist.setText(caSi.getTenCaSi());
         numberingchart.setText(String.valueOf(position + 1));
+
         textTitle.setText(baiHats.get(position).getTenBaiHat());
         imageMusicCover.setImageResource(baiHats.get(position).getAnhBaiHat());
+
         return view;
     }
     public void updateAndSortList(List<BaiHat> newList) {

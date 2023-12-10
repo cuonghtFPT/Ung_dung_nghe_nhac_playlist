@@ -17,9 +17,9 @@ import android.widget.TextView;
 import cuonghtph34430.poly.ung_dung_nghe_nhac_playlist.R;
 
 public class Fragment_Help extends Fragment {
-    TextView content_1,content_2,content_3,content_4,content_5;
-    ImageView arrow_1,arrow_2,arrow_3,arrow_4,arrow_5;
-    RelativeLayout question_1,question_2,question_3,question_4,question_5;
+    TextView content_1,content_2,content_3,content_4;
+    ImageView arrow_1,arrow_2,arrow_3,arrow_4;
+    RelativeLayout question_1,question_2,question_3,question_4;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,18 +74,7 @@ public class Fragment_Help extends Fragment {
                 }
             }
         });
-        question_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(content_5.getVisibility() == View.GONE){
-                    content_5.setVisibility(View.VISIBLE);
-                    arrow_5.setImageResource(R.drawable.baseline_keyboard_arrow_up_24);
-                }else{
-                    content_5.setVisibility(View.GONE);
-                    arrow_5.setImageResource(R.drawable.baseline_keyboard_arrow_down_24);
-                }
-            }
-        });
+
         return view;
     }
     public void initComponents(@NonNull View view){
@@ -93,16 +82,13 @@ public class Fragment_Help extends Fragment {
         question_2 = view.findViewById(R.id.question_2);
         question_3 = view.findViewById(R.id.question_3);
         question_4 = view.findViewById(R.id.question_4);
-        question_5 = view.findViewById(R.id.question_5);
         content_1 = view.findViewById(R.id.content_1);
         content_2 = view.findViewById(R.id.content_2);
         content_3 = view.findViewById(R.id.content_3);
         content_4 = view.findViewById(R.id.content_4);
-        content_5 = view.findViewById(R.id.content_5);
         arrow_1 = view.findViewById(R.id.arrow_1);
         arrow_2 = view.findViewById(R.id.arrow_2);
         arrow_3 = view.findViewById(R.id.arrow_3);
         arrow_4 = view.findViewById(R.id.arrow_4);
-        arrow_5 = view.findViewById(R.id.arrow_5);
     }
 }
