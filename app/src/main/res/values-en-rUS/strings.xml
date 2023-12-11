@@ -25,6 +25,11 @@
     <string name="fail_message">Invalid Username and Password.Sign in failed</string>
     <string name="history">History</string>
     <string name="Genre">Genre</string>
+    <string name="question_1">Do app support multiple languages ?</string>
+    <string name="question_2">How do i report a problem ?</string>
+    <string name="question_3">How can i get the lastest updates about the app ?</string>
+    <string name="question_4">What is MyPlayer?</string>
+    <string name="answer_3">You could go to the sidebar, click on \'Contact\', and then choose your prefer contact methods(Zalo, Facebook, Gmail, Phone) to get the latest updates on the app from us.</string>
     <string name="Chart">Chart</string>
     <string name="romance">Romance</string>
     <string name="dance">Dance</string>
@@ -45,4 +50,7 @@
     <string name="username_already_been_taken">Username Has Already Been Taken</string>
     <string name="please_fill_out_all_the_form">Please Fill Out The Missing Part</string>
     <string name="frequently_asked_question">Frequently Asked Question</string>
+    <string name="answer_1">We nows currently only support two main languages, Vietnamese and English. You can change the language settings by going to Personal > Settings > Language  then choose the language you want to switch to.</string>
+    <string name="answer_2">You can go to the sidebar and select \'Feedback,\' then you can report to us any issues you are encountering while using the app by pressing the + button on the right bottom side of the screen.</string>
+    <string name="answer_4">MyPlayer is an application developed for the purpose of listening to music.</string>
 </resources>

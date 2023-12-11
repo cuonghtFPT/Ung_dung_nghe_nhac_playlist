@@ -49,7 +49,7 @@ public class Log_in extends AppCompatActivity {
             }
             boolean login = nguoiDungDAO.checklogin(txtus, txtpsw);
             if (!login) {
-                Toast.makeText(getApplicationContext(), text3, Toast.LENGTH_SHORT).show();
+
             } else {
                 Toast.makeText(getApplicationContext(), text2, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
